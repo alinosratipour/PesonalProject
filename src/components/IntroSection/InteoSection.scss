@@ -27,9 +27,9 @@
 .text-secound {
   color: #fff;
   font-size: 5rem;
-  font-family: "Alfa Slab One", cursive;
+  font-family: var(--heading-text);
   color: var(--yello-color);
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 }
 h1 {
   position: relative;
@@ -38,7 +38,7 @@ h1 {
 
 .small-heading {
   position: relative;
-  font-family: "Armata", sans-serif;
+  font-family: var(--primary);
   text-align: left;
   width: 50%;
   color: #fff;

@@ -1,9 +1,11 @@
 import React from "react";
 import "./NavBar.scss";
+import Brand from "../Brand/Brand";
 const NavBar = () => {
   return (
     <div>
       <nav className="nav-bar">
+        <Brand />
         <ul className="nav-container">
           <li className="nav-item">
             <a href="#" className="nav-link">

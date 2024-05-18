@@ -1,8 +1,8 @@
 // src/components/ParticlesBackground.tsx
-import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
-import type { Engine } from 'tsparticles-engine';
+import React from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import type { Engine } from "tsparticles-engine";
 
 const ParticlesBackground: React.FC = () => {
   const particlesInit = async (main: Engine) => {
@@ -10,20 +10,20 @@ const ParticlesBackground: React.FC = () => {
     await loadFull(main);
   };
 
-  const particlesLoaded = (container: any) => {
-    console.log(container);
-  };
+  // const particlesLoaded = (container: any) => {
+  //   console.log(container);
+  // };
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
+      // loaded={particlesLoaded}
       options={{
         background: {
-        //   color: {
-        //     value: "#0d47a1",
-        //   },
+          //   color: {
+          //     value: "#0d47a1",
+          //   },
         },
         fpsLimit: 60,
         interactivity: {
@@ -69,7 +69,7 @@ const ParticlesBackground: React.FC = () => {
               default: "bounce",
             },
             random: false,
-            speed: 4,
+            speed: 3,
             straight: false,
           },
           number: {
