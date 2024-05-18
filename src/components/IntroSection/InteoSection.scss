@@ -17,15 +17,32 @@
   left: 0;
   z-index: 1;
 }
-.ali{
-    color: #fff;
+.ali {
+  font-size: 5rem;
+  font-family: "Alfa Slab One", cursive;
+  color: #fff;
+  letter-spacing: 4px;
+  padding-right: 10px;
 }
-.heading{
-    background-color:red ;
+.text-secound {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Alfa Slab One", cursive;
+  color: var(--yello-color);
+  letter-spacing: 4px;
 }
-.small-heading {
-  z-index: 2;
+h1 {
   position: relative;
-  margin-top: -10px;
+  z-index: 2;
+}
+
+.small-heading {
+  position: relative;
   font-family: "Armata", sans-serif;
+  text-align: left;
+  width: 50%;
+  color: #fff;
+  z-index: 2;
+  line-height: 1.5em;
+  font-size: 1.4rem;
 }

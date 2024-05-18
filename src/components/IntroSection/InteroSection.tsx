@@ -1,11 +1,13 @@
 import React from "react";
 import "./InteoSection.scss";
+import ParticlesBackground from "../ParticlesBackground";
 const IntroSection = () => {
   return (
     <div>
       <section className="home" id="home">
         <div id="overlay">
-          <div id="particles-js"></div>
+          {/* <div id="particles-js"></div> */}
+          <ParticlesBackground />
         </div>
 
         <h1 className="heading">
