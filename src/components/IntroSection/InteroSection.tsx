@@ -1,0 +1,28 @@
+import React from "react";
+import "./InteoSection.scss";
+const IntroSection = () => {
+  return (
+    <div>
+      <section className="home" id="home">
+        <div id="overlay">
+          <div id="particles-js"></div>
+        </div>
+
+        <h1 className="heading">
+          <span className="ali">Ali</span>{" "}
+          <span className="text-secound">NosratiPour</span>
+        </h1>
+        <p className="small-heading">
+          I'm Ali Nosratipour, a London-based Full-Stack Developer with three
+          years of commercial experience. I excel in both agile team
+          environments and freelance settings, delivering end-to-end solutions
+          using technologies like React, Node.js, and GraphQL. Beyond coding, I
+          bring a deep understanding of business domains and logic, leveraging
+          this insight to drive meaningful business impact.
+        </p>
+      </section>
+    </div>
+  );
+};
+
+export default IntroSection;
