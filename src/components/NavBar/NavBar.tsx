@@ -19,7 +19,7 @@ const NavBar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#about" className="nav-link">
+            <a href="#skills" className="nav-link">
               About Me
             </a>
           </li>

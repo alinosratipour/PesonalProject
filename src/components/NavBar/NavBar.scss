@@ -1,13 +1,11 @@
-body{
-  background-color: red;
+body {
   overflow-x: hidden;
 }
 .nav-bar {
   background-color: var(--nav-bg);
-  position: relative;
-  z-index: 3;
+  position: fixed;
+  z-index: 9;
   width: 100%;
-   /* Prevent horizontal overflow */
 }
 
 .nav-container {
@@ -28,7 +26,4 @@ body{
 .nav-link {
   text-decoration: none;
   color: white;
- 
 }
-
-

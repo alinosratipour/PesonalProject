@@ -2,14 +2,21 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+}
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
   --nav-bg: rgb(35, 49, 49);
   --secondary: "Lato", Calibri, Arial, sans-serif;
   --primary: "Armata", sans-serif;
-  --heading-text:"Alfa Slab One", cursive;
-  --home-overlay:rgba(0, 34, 34, 0.9);
-  --yello-color:#f1d900;
+  --heading-text: "Alfa Slab One", cursive;
+  --home-overlay: rgba(0, 34, 34, 0.9);
+  --yello-color: #f1d900;
+  --about-color: rgb(0, 34, 34);
+  --skill-section: rgb(0, 34, 34);
+  --skill-list: rgb(0, 34, 34);
+  --skill-color: #000;
+  --green: #006f6f;
 }
