@@ -41,11 +41,11 @@ h1 {
   font-family: var(--primary);
   text-align: left;
   width: 50%;
-  color: #fff;
+  color: var(--about-font);
   z-index: 2;
   line-height: 1.5em;
   font-size: 1.4rem;
 }
-.heading{
+.heading {
   padding-top: 160px;
 }

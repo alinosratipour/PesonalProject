@@ -18,7 +18,7 @@ const Portfolio = () => {
       </div>
 
       <div className="box card-1">
-        <img src="../img/monsoon.jpg" className="img3" alt="" />
+        <img src="src/assets/img/pizzaShop.png" className="img3" alt="" />
         <div className="overlay  ">
           <div className="content">Monsoon </div>
           <a href="#myy-mod2" className="mod-fire">
@@ -28,7 +28,7 @@ const Portfolio = () => {
       </div>
 
       <div className="box card-1">
-        <img src="../img/frontEnd-Montor.png" className="img" alt="" />
+        <img src="src/assets/img/portfolio.png"  className="black-and-white" alt="" />
         <div className="overlay  ">
           <div className="content">Portfolio Site</div>
           <a href="#myy-mod1" className="mod-fire">

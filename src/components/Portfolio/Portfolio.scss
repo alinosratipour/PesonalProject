@@ -6,24 +6,20 @@
   padding-bottom: 80px;
   position: relative;
   background-color: var(--portfolio-color);
-
   height: 100vh;
   z-index: 6;
   // border-bottom: 1px $about-font solid;
-.Card-Container{
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 60px;
-    
-   
-}
+  .Card-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
   .card {
     width: 100%;
     margin-top: 40px;
     margin-bottom: 10px;
     font-family: var(--primary);
-    
   }
 
   .card h3 {
@@ -37,12 +33,12 @@ gap: 60px;
   }
 
   .head-portfolio {
-    font-size: 5rem;
+    font-size: 4rem;
     color: rgb(166, 178, 176);
     font-family: var(--heading-text);
     letter-spacing: 5px;
     text-align: center;
-    
+    margin-top: 3px;
   }
 }
 
@@ -222,12 +218,13 @@ p {
   padding: 0 24px 0 40px;
 }
 .box img {
-  display: block;
-  max-width: 100%;
-  width: 350px;
-  height: 299px;
-  filter: sepia(0.76);
-  opacity: 0.6;
-  border: 5px solid #1c6ea4;
-  border-radius: 40px 0px 40px 0px;
-}
+    display: block;
+    width: 350px;
+    height: 299px;
+    object-fit: cover;
+    opacity: 0.6;
+    border: 5px solid #1c6ea4;
+    border-radius: 40px 0px 40px 0px;
+    filter: grayscale(100%);
+  }
+  

@@ -4,6 +4,7 @@ import InteroSection from "../src/components/IntroSection/InteroSection";
 import "./global.scss";
 import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/Portfolio/Portfolio";
+import About from "./components/About/About";
 const App = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const App = () => {
       <InteroSection />
       <Skills />
       <Portfolio />
+      <About />
     </div>
   );
 };
