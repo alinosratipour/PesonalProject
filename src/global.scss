@@ -6,7 +6,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
+// Define your base colors in SCSS variables
+$about-color: rgb(0, 34, 34);
 
+// Use the lighten function to create new lightened colors
+$skill-section-light: lighten($about-color, 5%);
+$skill-list-light: lighten($about-color, 15%);
+$contact-color: lighten($about-color, 2%);
+$contact-details: darken($about-color, 2%);
 :root {
   --nav-bg: rgb(35, 49, 49);
   --secondary: "Lato", Calibri, Arial, sans-serif;
@@ -14,9 +21,12 @@ html {
   --heading-text: "Alfa Slab One", cursive;
   --home-overlay: rgba(0, 34, 34, 0.9);
   --yello-color: #f1d900;
-  --about-color: rgb(0, 34, 34);
-  --skill-section: rgb(0, 34, 34);
-  --skill-list: rgb(0, 34, 34);
+  --about-color: #002222; // Assuming you want to keep the base color in CSS variables
+  --skill-section: #{$skill-section-light};
+  --skill-list: #{$skill-list-light};
   --skill-color: #000;
   --green: #006f6f;
+  // $primary-color: #444;
+  --contact-color1:#($contact-color);
+  --portfolio-color:rgba(1, 32, 29 , 0.9);
 }

@@ -6,24 +6,19 @@ import type { Engine } from "tsparticles-engine";
 
 const ParticlesBackground: React.FC = () => {
   const particlesInit = async (main: Engine) => {
-    // You can initialize the tsparticles instance (main) here, adding custom shapes or presets
     await loadFull(main);
   };
-
-  // const particlesLoaded = (container: any) => {
-  //   console.log(container);
-  // };
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      // loaded={particlesLoaded}
       options={{
         background: {
-          //   color: {
-          //     value: "#0d47a1",
-          //   },
+          // Uncomment and set your background color if needed
+          // color: {
+          //   value: "#0d47a1",
+          // },
         },
         fpsLimit: 60,
         interactivity: {
@@ -69,7 +64,7 @@ const ParticlesBackground: React.FC = () => {
               default: "bounce",
             },
             random: false,
-            speed: 2,
+            speed: 2, // Constant speed
             straight: false,
           },
           number: {

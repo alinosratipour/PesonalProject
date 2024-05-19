@@ -36,7 +36,7 @@ h1 {
   z-index: 2;
 }
 
-.small-heading {
+.Intro-Text {
   position: relative;
   font-family: var(--primary);
   text-align: left;
@@ -45,4 +45,7 @@ h1 {
   z-index: 2;
   line-height: 1.5em;
   font-size: 1.4rem;
+}
+.heading{
+  padding-top: 160px;
 }

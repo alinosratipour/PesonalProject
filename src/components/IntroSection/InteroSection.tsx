@@ -13,7 +13,7 @@ const IntroSection = () => {
           <span className="ali">Ali</span>{" "}
           <span className="text-secound">NosratiPour</span>
         </h1>
-        <p className="small-heading">
+        <p className="Intro-Text">
           I'm Ali Nosratipour, a London-based Full-Stack Developer with three
           years of commercial experience. I excel in both agile team
           environments and freelance settings, delivering end-to-end solutions

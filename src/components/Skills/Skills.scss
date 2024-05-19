@@ -40,7 +40,7 @@
     
 }
 .head-title {
-  font-family: "Alfa Slab One", cursive;
+  font-family: var(--heading-text);
   width: 100%;
   text-align: center;
   padding-top: 80px;
@@ -65,7 +65,6 @@
   .skill-name {
     background-color: var(--green);
     text-align: center;
-    border: 1px solid black;
     margin: 5px;
     border-radius: 9px;
     font-size: 1.2rem;
