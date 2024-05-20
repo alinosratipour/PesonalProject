@@ -1,15 +1,15 @@
 // General input styles
-input {
-  border-radius: 10px;
-  width: 90%;
-  padding: 20px;
-  padding-left: 50px; // Make room for the icon
-  //border: 1px solid transparent; // Set initial border
-  margin: 6px;
-  outline: none;
-  box-sizing: border-box; // Include padding and border in the element's total width and height
-  font-family: var(--primary);
-}
+// input {
+//   border-radius: 10px;
+//   width: 90%;
+//   padding: 20px;
+//   padding-left: 50px; // Make room for the icon
+//   //border: 1px solid transparent; // Set initial border
+//   margin: 6px;
+//   outline: none;
+//   box-sizing: border-box; // Include padding and border in the element's total width and height
+//   font-family: var(--primary);
+// }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -41,8 +41,12 @@ input {
   padding-left: 50px; // Adjust padding to make room for the icon
   border: 1px solid transparent; // Set initial border
   font-family: var(--primary);
-  outline: none;
   box-sizing: border-box;
+  margin: 6px;
+  outline: none;
+  box-sizing: border-box; // Include padding and border in the element's total width and height
+  font-family: var(--primary);
+  color: #fff;
 }
 
 .input-icons {
