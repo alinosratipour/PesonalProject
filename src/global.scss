@@ -27,6 +27,7 @@ $contact-details: darken($about-color, 2%);
   --skill-color: #000;
   --green: #006f6f;
   --about-font: rgb(166, 178, 176);
-  --contact-color1: #($contact-color);
+  --contact: #{$contact-color};
+  --contact-detailes: #{$contact-details};
   --portfolio-color: rgba(1, 32, 29, 0.9);
 }
