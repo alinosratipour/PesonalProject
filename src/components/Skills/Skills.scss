@@ -1,9 +1,7 @@
-
 .Icon {
   color: rgb(166, 178, 176);
   font-size: 7rem;
 }
-
 
 .mybox {
   height: auto;
@@ -17,27 +15,24 @@
   }
 }
 .Skills-Section {
- position: relative;
- z-index: 5;
- background: var(--skill-section);
- height: 100vh;
-
-  
+  position: relative;
+  z-index: 5;
+  background: var(--skill-section);
+  height: 100vh;
 }
-.Skill-Box-Container{
-    width: 100%;
-    color: (--skill-color);
-    font-size: 2.5rem;
-    text-align: center;
-    display: flex;
-    font-family: "Armata", sans-serif;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    gap: 50px;
-    position: relative;
-    z-index: 4;
-   
-    
+.Skill-Box-Container {
+  width: 100%;
+  color: (--skill-color);
+  font-size: 2.5rem;
+  display: flex;
+  font-family: "Armata", sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 50px;
+  position: relative;
+  z-index: 4;
+
+ 
 }
 .head-title {
   font-family: var(--heading-text);
@@ -48,13 +43,14 @@
   color: rgb(166, 178, 176);
   margin: 0;
   letter-spacing: 5px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 .mybox {
   height: auto;
   font-size: 1.2rem;
   width: 70%;
-  margin: 0 auto;
+  text-align: center;
+
 
   h6 {
     font-size: 1.5rem;
@@ -65,22 +61,24 @@
   .skill-name {
     background-color: var(--green);
     text-align: center;
-    margin: 5px;
+    margin-top: 5px !important;
     border-radius: 9px;
     font-size: 1.2rem;
     color: white;
-    margin-right: 50px;
     padding: 15px;
+    width: 80%;
+    margin: 0 auto;
+    
   }
 
   .skill-list {
-    margin-top: -40px;
-  
+    margin-top: 20px;
   }
 
   ul li {
     text-decoration: none;
     list-style: none;
     text-align: left;
+
   }
 }

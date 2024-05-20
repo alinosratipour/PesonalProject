@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,5 +31,5 @@ $contact-details: darken($about-color, 2%);
   --contact: #{$contact-color};
   --contact-detailes: #{$contact-details};
   --portfolio-color: rgba(1, 32, 29, 0.9);
-  --form-input-color:rgba(166, 178, 176, 0.3);
+  --form-input-color: rgba(166, 178, 176, 0.3);
 }

@@ -1,23 +1,56 @@
+// General input styles
+input {
+  border-radius: 10px;
+  width: 90%;
+  padding: 20px;
+  padding-left: 50px; // Make room for the icon
+  //border: 1px solid transparent; // Set initial border
+  margin: 6px;
+  outline: none;
+  box-sizing: border-box; // Include padding and border in the element's total width and height
+  font-family: var(--primary);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(194, 184, 184);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(194, 184, 184);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(194, 184, 184);
+}
+
 .text-field .input-container {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 }
-.input-container input{
-    border-radius: 10px;
-    width: 90%;
-    padding: 30px;
-    border-style: none;
 
-    outline: none;
+.input-container input {
+  border-radius: 10px;
+  width: 100%; // Ensure full width within container
+  padding: 20px;
+  padding-left: 50px; // Adjust padding to make room for the icon
+  border: 1px solid transparent; // Set initial border
+  font-family: var(--primary);
+  outline: none;
+  box-sizing: border-box;
 }
 
 .input-icons {
- display: flex;
-    color: white;
-    font-size: 2rem;
-  }
+  display: flex;
+  color: white;
+  font-size: 2rem;
+}
+
 .text-field .input-icon {
   position: absolute;
   left: 10px;
@@ -29,12 +62,12 @@
 .text-field .placeholder-icon {
   position: absolute;
   left: 10px;
-  color: #ccc; 
+  color: #ccc;
   pointer-events: none;
 }
 
 .text-field .input {
-  padding-left: 40px; // Adjust padding to make room for the icon
+  padding-left: 50px; // Adjust padding to make room for the icon
 }
 
 .text-field .input-small {
@@ -49,9 +82,9 @@
   width: 90%;
 }
 
-.input[type="text"]:focus {
-  border: 1px solid #002855;
-}
+// .input[type="text"]:focus {
+//   border: 1px solid #002855; // Change border color on focus
+// }
 
 .text-field {
   display: flex;

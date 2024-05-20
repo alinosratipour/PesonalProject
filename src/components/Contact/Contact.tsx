@@ -1,8 +1,11 @@
 import React from "react";
 import { GoPersonFill } from "react-icons/go";
 import { MdEmail } from "react-icons/md";
+import { PiBuildingOfficeFill as Office } from "react-icons/pi";
+import { FaPen } from "react-icons/fa";
 import "./Contact.scss";
 import TextField from "../UILibrary/TextField/TextFiled";
+import TextAreaField from "../UILibrary/TextField/TextArea/TextArea";
 
 const Contact = () => {
   const handleInputChange = (
@@ -12,6 +15,11 @@ const Contact = () => {
   ) => {
     const { name, value } = event.currentTarget;
     //validateInput(name, value, values, setValues, setErrors);
+  };
+  const handleTextAreaChange = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    // Handle input change logic here
   };
 
   return (
@@ -40,10 +48,9 @@ const Contact = () => {
         <form name="contact" method="POST" data-netlify="true" id="contact">
           <p className="input-icons">
             <TextField
-              //label="Phone Number"
               type="text"
               name="text"
-              placeholder="e.g. 1 234 567 890"
+              placeholder="Name"
               onChange={handleInputChange}
               // value={values.phone}
               //error={errors.phone}
@@ -53,12 +60,10 @@ const Contact = () => {
               data-testid="phone-field"
               icon={<GoPersonFill />}
             />
-            <i className="fa fa-user icon"></i>
           </p>
 
           <p className="input-icons">
             <TextField
-              //label="Phone Number"
               type="email"
               name="email"
               placeholder="Email"
@@ -73,27 +78,32 @@ const Contact = () => {
             />
           </p>
           <p className="input-icons">
-            <input
+            <TextField
               type="text"
-              id="user-company"
-              name="company"
-              className="input-txt"
-              placeholder="Company Name"
+              name="text"
+              placeholder="Company"
+              onChange={handleInputChange}
+              // value={values.phone}
+              //error={errors.phone}
+              errorMessagePosition="above"
+              inputBackgroundColor="green"
+              inputSize="large"
+              data-testid="phone-field"
+              icon={<Office />}
             />
-
-            <i className="fas fa-building icon"></i>
           </p>
 
           <p className=" input-icons ">
-            <textarea
-              name="msg"
-              className="input-txt2"
-              id="user-msg"
-              rows="5"
-              required
-              placeholder="Message"
-            ></textarea>
-            <i className="fas fa-pen icon"></i>
+            <TextAreaField
+              name="message"
+              placeholder="Enter your message..."
+              onChange={handleTextAreaChange}
+              inputBackgroundColor="green"
+              inputSize="large"
+              rows={7}
+              icon={<FaPen />}
+            />
+    
           </p>
           <p className=" input-icons ">
             <button type="submit" name="submit" id="submitBtn">
