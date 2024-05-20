@@ -1,7 +1,19 @@
 import React from "react";
+import { GoPersonFill } from "react-icons/go";
+import { MdEmail } from "react-icons/md";
 import "./Contact.scss";
+import TextField from "../UILibrary/TextField/TextFiled";
 
 const Contact = () => {
+  const handleInputChange = (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.FormEvent<HTMLFormElement>
+  ) => {
+    const { name, value } = event.currentTarget;
+    //validateInput(name, value, values, setValues, setErrors);
+  };
+
   return (
     <section className="contact">
       <div className="details">
@@ -27,28 +39,38 @@ const Contact = () => {
       <div className="form-container">
         <form name="contact" method="POST" data-netlify="true" id="contact">
           <p className="input-icons">
-            <input
+            <TextField
+              //label="Phone Number"
               type="text"
-              id="user-name"
-              name="name"
-              required
-              className="input-txt"
-              placeholder="Name"
+              name="text"
+              placeholder="e.g. 1 234 567 890"
+              onChange={handleInputChange}
+              // value={values.phone}
+              //error={errors.phone}
+              errorMessagePosition="above"
+              inputBackgroundColor="green"
+              inputSize="large"
+              data-testid="phone-field"
+              icon={<GoPersonFill />}
             />
             <i className="fa fa-user icon"></i>
           </p>
 
           <p className="input-icons">
-            <input
+            <TextField
+              //label="Phone Number"
               type="email"
-              id="user-email"
               name="email"
-              pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-              required
-              className="input-txt "
               placeholder="Email"
+              onChange={handleInputChange}
+              // value={values.phone}
+              //error={errors.phone}
+              errorMessagePosition="above"
+              inputBackgroundColor="green"
+              inputSize="large"
+              data-testid="phone-field"
+              icon={<MdEmail />}
             />
-            <i className="fa fa-envelope icon"></i>
           </p>
           <p className="input-icons">
             <input

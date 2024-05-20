@@ -1,0 +1,109 @@
+.text-field .input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.input-container input{
+    border-radius: 10px;
+    width: 90%;
+    padding: 30px;
+    border-style: none;
+
+    outline: none;
+}
+
+.input-icons {
+ display: flex;
+    color: white;
+    font-size: 2rem;
+  }
+.text-field .input-icon {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.text-field .placeholder-icon {
+  position: absolute;
+  left: 10px;
+  color: #ccc; 
+  pointer-events: none;
+}
+
+.text-field .input {
+  padding-left: 40px; // Adjust padding to make room for the icon
+}
+
+.text-field .input-small {
+  width: 30%;
+}
+
+.text-field .input-medium {
+  width: 50%;
+}
+
+.text-field .input-large {
+  width: 90%;
+}
+
+.input[type="text"]:focus {
+  border: 1px solid #002855;
+}
+
+.text-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.error-message-above {
+  color: red;
+  font-size: 12px;
+  margin-left: 8px;
+  text-align: right;
+}
+
+.input-border-error {
+  border: 1px solid red;
+}
+
+.label {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: UbuntuRegular;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+  .input {
+    padding: 12px;
+    margin-top: 1px;
+  }
+  .label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Color classes */
+.input-color-blue {
+  background-color: blue;
+}
+
+.input-color-green {
+  background-color: var(--form-input-color);
+}
+
+.input-color-yellow {
+  background-color: lightyellow;
+}
+
+.input-color-red {
+  background-color: orange;
+}

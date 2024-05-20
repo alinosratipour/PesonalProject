@@ -87,7 +87,7 @@
 
       :hover {
         color: var(--yellow-color);
-       // @include easeOut();
+        // @include easeOut();
       }
     }
   }
@@ -143,11 +143,10 @@
   position: absolute;
   margin-left: 10px;
   margin-top: 10px;
+
 }
 
-.input-icons {
-  display: flex;
-}
+
 
 //form error handeling
 .form-msg {
@@ -284,7 +283,7 @@
   margin-bottom: 5px;
   border: none;
   color: #fff;
- // background: darken(var(--about-font), 30%);
+  // background: darken(var(--about-font), 30%);
   transition-property: background;
   transition-duration: 0.9s;
   font-size: 1rem;

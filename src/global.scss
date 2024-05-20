@@ -14,6 +14,7 @@ $skill-section-light: lighten($about-color, 5%);
 $skill-list-light: lighten($about-color, 15%);
 $contact-color: lighten($about-color, 2%);
 $contact-details: darken($about-color, 2%);
+
 :root {
   --nav-bg: rgb(35, 49, 49);
   --secondary: "Lato", Calibri, Arial, sans-serif;
@@ -30,4 +31,5 @@ $contact-details: darken($about-color, 2%);
   --contact: #{$contact-color};
   --contact-detailes: #{$contact-details};
   --portfolio-color: rgba(1, 32, 29, 0.9);
+  --form-input-color:rgba(166, 178, 176, 0.3);
 }
