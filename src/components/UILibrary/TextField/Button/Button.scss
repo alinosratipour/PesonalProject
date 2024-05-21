@@ -1,0 +1,64 @@
+button {
+  width: 90%;
+  padding: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+  color: #fff;
+  transition-duration: 0.9s;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+
+  
+  // button sizes
+  &.button--small {
+    height: 40px;
+    width: 100px;
+    font-size: 12px;
+  }
+  &.button--medium {
+    height: 50px;
+    width: 120px;
+    font-size: 16px;
+  }
+  &.button--large {
+    height: 50px;
+    width: 90%;
+    font-size: 16px;
+  }
+
+  // button colorScheme
+  &.button--primary {
+    background-color: var(--green);
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      border: none;
+      background-color: var(--yello-color);
+      color: #000;
+    }
+  }
+
+  &.button--secondery {
+    background-color: rgb(8, 30, 228);
+    &:hover {
+      background-color: rgb(95, 110, 244);
+    }
+  }
+
+  &.button--whatsApp {
+    background-color: rgb(48, 158, 48);
+    &:hover {
+      background-color: rgb(77, 248, 77);
+    }
+  }
+
+  &.button--disabled:disabled {
+    background-color: rgb(182, 179, 179);
+    cursor: not-allowed;
+  }
+}

@@ -1,3 +1,4 @@
+
 .form-container {
   width: 80%;
   text-align: center;
@@ -64,29 +65,54 @@
   z-index: 7;
   background-color: var(--contact);
 }
+// .icons{
+// padding-top: 350px;
+// font-size: 2rem;
 
+// }
 .form-container p {
   padding: 0;
   margin: 0;
 }
-
+.form {
+  padding-top: 20px;
+}
 .details {
   background: var(--contact-detailes);
   width: calc(50% + 50px);
   text-align: center;
   flex: 1;
-  padding-top: 190px;
-  padding-bottom: 10px;
+  padding-top: 220px;
+  color: var(--about-font);
+  font-family: var(--heading-text);
+  //padding-bottom: 10px;
 
   .icons {
-    margin-top: 1rem;
+    padding-bottom: 50px;
+  padding-top: 290px;
+  
+
     a {
-      padding: 0.5rem;
+      padding-right: 0.5rem;
 
       :hover {
         color: var(--yellow-color);
         //@include easeOut();
       }
     }
+  }
+  .icons i {
+    font-size: 3rem;
+    color: var(--about-font);
+    transition: all 0.5s ease-out;
+  }
+  .icon:hover {
+    color: yellow;
+  }
+  .phone {
+  //  padding-bottom: 30px;
+  }
+  .head-contact{
+    color: var(--about-font);
   }
 }

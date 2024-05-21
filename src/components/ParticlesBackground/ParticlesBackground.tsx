@@ -64,7 +64,7 @@ const ParticlesBackground: React.FC = () => {
               default: "bounce",
             },
             random: false,
-            speed: 2, // Constant speed
+            speed: 2, // Reduced speed for smooth and slow movement
             straight: false,
           },
           number: {

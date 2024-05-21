@@ -3,9 +3,12 @@ import { GoPersonFill } from "react-icons/go";
 import { MdEmail } from "react-icons/md";
 import { PiBuildingOfficeFill as Office } from "react-icons/pi";
 import { FaPen } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import "./Contact.scss";
 import TextField from "../UILibrary/TextField/TextFiled";
 import TextAreaField from "../UILibrary/TextField/TextArea/TextArea";
+import CustomButton from "../UILibrary/TextField/Button/Button";
 
 const Contact = () => {
   const handleInputChange = (
@@ -33,19 +36,30 @@ const Contact = () => {
           <br /> the contact form{" "}
         </p>
         <div className="icons">
-          <a className="section2" href="https://github.com/alinosratipour">
+          <a className="icon" href="https://github.com/alinosratipour">
             {" "}
-            <i className="fab fa-github fa-2x"></i>
+            <i>
+              {" "}
+              <FaGithub />
+            </i>
           </a>
 
-          <a href="https://www.linkedin.com/in/ali-nosratipour-52baa120b">
-            {" "}
-            <i className="fab fa-linkedin fa-2x"></i>
+          <a className="icon" href="https://www.linkedin.com/in/ali-nosratipour-52baa120b">
+            
+            <i className="linkedIn">
+              <FaLinkedin />
+            </i>
           </a>
         </div>
       </div>
       <div className="form-container">
-        <form name="contact" method="POST" data-netlify="true" id="contact">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          id="contact"
+          className="form"
+        >
           <p className="input-icons">
             <TextField
               type="text"
@@ -103,12 +117,19 @@ const Contact = () => {
               rows={7}
               icon={<FaPen />}
             />
-    
           </p>
           <p className=" input-icons ">
-            <button type="submit" name="submit" id="submitBtn">
+            {/* <button type="submit" name="submit" id="submitBtn">
               Send
-            </button>
+            </button> */}
+            <CustomButton
+              colorscheme="primary"
+              size="lg"
+              iconPosition="left"
+              onClick={() => alert("Button with icon clicked!")}
+            >
+              Send
+            </CustomButton>
           </p>
           <div className="form-msg"> </div>
         </form>
