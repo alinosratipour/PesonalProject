@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { GoPersonFill } from "react-icons/go";
 import { MdEmail } from "react-icons/md";
 import { PiBuildingOfficeFill as Office } from "react-icons/pi";
@@ -7,10 +8,17 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import "./Contact.scss";
 import TextField from "../UILibrary/TextField/TextFiled";
-import TextAreaField from "../UILibrary/TextField/TextArea/TextArea";
-import CustomButton from "../UILibrary/TextField/Button/Button";
+import TextAreaField from "../UILibrary/TextArea/TextArea";
+import CustomButton from "../UILibrary/Button/Button";
+import Modal from "../UILibrary/Modal/Modal";
+
+// Load environment variables
+const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID ?? "";
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID ?? "";
+const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY ?? "";
 
 const Contact = () => {
+  const [showModal, setShowModal] = useState(false);
   const handleInputChange = (
     event:
       | React.ChangeEvent<HTMLInputElement>
@@ -25,6 +33,31 @@ const Contact = () => {
     // Handle input change logic here
   };
 
+  // Correctly type the form ref
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+          publicKey: PUBLIC_KEY,
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setShowModal(true);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    }
+  };
+  const closeModal = () => {
+    setShowModal(false); // Function to close the modal
+  };
   return (
     <section className="contact">
       <div className="details">
@@ -44,8 +77,10 @@ const Contact = () => {
             </i>
           </a>
 
-          <a className="icon" href="https://www.linkedin.com/in/ali-nosratipour-52baa120b">
-            
+          <a
+            className="icon"
+            href="https://www.linkedin.com/in/ali-nosratipour-52baa120b"
+          >
             <i className="linkedIn">
               <FaLinkedin />
             </i>
@@ -59,11 +94,13 @@ const Contact = () => {
           data-netlify="true"
           id="contact"
           className="form"
+          ref={form}
+          onSubmit={sendEmail} // Added onSubmit to handle form submission
         >
           <p className="input-icons">
             <TextField
               type="text"
-              name="text"
+              name="name"
               placeholder="Name"
               onChange={handleInputChange}
               // value={values.phone}
@@ -119,14 +156,11 @@ const Contact = () => {
             />
           </p>
           <p className=" input-icons ">
-            {/* <button type="submit" name="submit" id="submitBtn">
-              Send
-            </button> */}
             <CustomButton
               colorscheme="primary"
               size="lg"
               iconPosition="left"
-              onClick={() => alert("Button with icon clicked!")}
+              type="submit" // Changed button to submit type
             >
               Send
             </CustomButton>
@@ -134,6 +168,14 @@ const Contact = () => {
           <div className="form-msg"> </div>
         </form>
       </div>
+      {showModal && (
+        <Modal onClose={closeModal}>
+          {" "}
+          {/* Render the modal conditionally */}
+          <h2>Success!</h2>
+          <p>Your message has been sent successfully.</p>
+        </Modal>
+      )}
     </section>
   );
 };

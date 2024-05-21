@@ -1,4 +1,3 @@
-
 .form-container {
   width: 80%;
   text-align: center;
@@ -44,6 +43,7 @@
 .or {
   font-size: 2rem;
   color: var(--about-font);
+  margin-top: 30px;
 }
 
 #contact {
@@ -52,7 +52,6 @@
   margin: 0 auto;
   font-family: "Armata", sans-serif;
   margin-top: 60px;
-  padding-bottom: 40px;
 }
 
 .contact {
@@ -82,15 +81,14 @@
   width: calc(50% + 50px);
   text-align: center;
   flex: 1;
-  padding-top: 220px;
+  padding-top: 210px;
   color: var(--about-font);
   font-family: var(--heading-text);
   //padding-bottom: 10px;
 
   .icons {
     padding-bottom: 50px;
-  padding-top: 290px;
-  
+    padding-top: 290px;
 
     a {
       padding-right: 0.5rem;
@@ -110,9 +108,10 @@
     color: yellow;
   }
   .phone {
-  //  padding-bottom: 30px;
+    //  padding-bottom: 30px;
   }
-  .head-contact{
+  .head-contact {
+    //padding-bottom: 30px;
     color: var(--about-font);
   }
 }
