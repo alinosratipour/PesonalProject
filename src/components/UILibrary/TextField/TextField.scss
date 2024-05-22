@@ -1,3 +1,4 @@
+@import "../../../global.scss";
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(194, 184, 184);
@@ -18,6 +19,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -49,10 +51,11 @@
 }
 .text-field .input-icon {
   position: absolute;
-  left: 10px;
+  left: 50px;
   display: flex;
   align-items: center;
   pointer-events: none;
+  color: #fff;
 }
 
 .text-field .input {
@@ -107,4 +110,15 @@
 
 .input-color-red {
   background-color: orange;
+}
+
+@include small-screen {
+  .text-field .input-icon {
+    position: absolute;
+    left: 23px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    color: #fff;
+  }
 }

@@ -5,8 +5,11 @@ body {
 .nav-bar {
   background-color: var(--nav-bg);
   position: fixed;
-  z-index: 25;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 100;
+
 }
 
 .nav-container {
@@ -30,7 +33,9 @@ body {
 }
 
 @include small-screen {
+
   .nav-link{
     display: none;
   }
+ 
 }

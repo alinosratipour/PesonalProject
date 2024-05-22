@@ -1,3 +1,4 @@
+@import "../../global.scss";
 .Icon {
   color: rgb(166, 178, 176);
   font-size: 7rem;
@@ -31,8 +32,6 @@
   gap: 50px;
   position: relative;
   z-index: 4;
-
- 
 }
 .head-title {
   font-family: var(--heading-text);
@@ -51,7 +50,6 @@
   width: 70%;
   text-align: center;
 
-
   h6 {
     font-size: 1.5rem;
     text-align: center;
@@ -68,7 +66,6 @@
     padding: 15px;
     width: 80%;
     margin: 0 auto;
-    
   }
 
   .skill-list {
@@ -79,6 +76,38 @@
     text-decoration: none;
     list-style: none;
     text-align: left;
+  }
+}
 
+@include small-screen {
+  .Skill-Box-Container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .Skills-Section {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .head-title {
+    font-size: 2.5rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .Icon {
+    font-size: 5rem;
+  }
+
+  .mybox {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+    padding: 10px;
   }
 }

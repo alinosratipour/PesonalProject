@@ -1,3 +1,4 @@
+@import "../../../global.scss";
 .text-area {
   display: flex;
   flex-direction: column;
@@ -51,7 +52,10 @@
     position: absolute;
     top: 30%;
     transform: translateY(-50%);
-    left: 18px;
+    left: 52px;
+    color: #fff;
+    
+    
   }
 
   .placeholder-icon {
@@ -66,6 +70,7 @@
     outline: none;
     margin-top: 6px;
     margin-left: 5px;
+    
   }
 }
 
@@ -74,4 +79,13 @@
 }
 .text-area .text-error::placeholder {
   color: black;
+}
+
+@include small-screen {
+  .textarea-icon,
+  .placeholder-icon {
+    margin-left: -23px;
+  }
+ 
+  
 }

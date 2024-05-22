@@ -1,3 +1,4 @@
+@import "../../global.scss";
 #portfolio {
   width: 100%;
   color: var(--skill-color);
@@ -12,14 +13,12 @@
     justify-content: center;
     align-items: center;
     gap: 60px;
-  
   }
   .card {
     width: 100%;
     margin-top: 40px;
     margin-bottom: 10px;
     font-family: var(--primary);
-    
   }
 
   .card h3 {
@@ -36,7 +35,7 @@
     font-size: 4rem;
     color: rgb(166, 178, 176);
     font-family: var(--heading-text);
-    letter-spacing: 5px;
+
     text-align: center;
     margin-top: 3px;
   }
@@ -224,4 +223,41 @@ p {
   border: 5px solid #1c6ea4;
   border-radius: 40px 0px 40px 0px;
   filter: grayscale(100%);
+}
+
+@include small-screen {
+  #portfolio {
+    padding: 2rem 1rem; // Adjust padding for smaller screens
+    height: auto; // Ensure height adjusts to content
+  }
+
+  .head-portfolio {
+    font-size: 2.5rem; // Adjust font size for smaller screens
+    padding-top: 20px; // Adjust padding for smaller screens
+    padding-bottom: 20px; // Adjust padding for smaller screens
+  }
+
+  .Card-Container {
+    flex-direction: column;
+    gap: 20px; // Adjust gap for smaller screens
+  }
+
+  .box {
+    width: 90%; // Adjust width for smaller screens
+    margin-bottom: 20px; // Added margin for spacing
+    height: auto; // Allow height to adjust to content
+  }
+
+  .box img {
+    width: 100%; // Make images responsive
+    height: auto; // Maintain aspect ratio
+  }
+
+  .content {
+    font-size: 1rem; // Adjust font size for readability
+  }
+
+  .mod-content {
+    width: 90%; // Ensure modal content fits smaller screens
+  }
 }

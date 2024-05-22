@@ -44,7 +44,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       ref={formRef} // Use formRef in the form component
       onSubmit={onSubmit} // Added onSubmit to handle form submission
     >
-      <div className="input-icons">
+      <div className="input-Container">
         <TextField
           type="text"
           name="name"
@@ -95,7 +95,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           icon={<FaPen />}
         />
       </div>
-      <p className="input-icons">
+      <div className="button">
         <CustomButton
           colorscheme="primary"
           size="lg"
@@ -104,8 +104,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
         >
           Send
         </CustomButton>
-      </p>
-      <div className="form-msg"> </div>
+      </div>
+    
     </form>
   );
 };

@@ -1,3 +1,4 @@
+@import "../../global.scss";
 .about-wrapper {
   position: relative;
   width: 100%;
@@ -126,4 +127,43 @@
 
 .about-text {
   color: var(--about-font);
+}
+@media (max-width: 768px) {
+  .Photo-Container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .Photo-Container p {
+    padding: 0;
+  }
+  
+  .flex-wrapper, .flex-wrapper-2 {
+    flex-direction: column;
+    padding-bottom: 4rem;
+  }
+  
+  .service-Description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title .title-1 {
+    font-size: 3rem;
+  }
+  
+  .what-i-do {
+    font-size: 2rem;
+  }
+  
+  .service-Description {
+    font-size: 1rem;
+  }
+  
+  .my-pic {
+    width: 200px;
+    height: 200px;
+    margin-left: 0;
+  }
 }
