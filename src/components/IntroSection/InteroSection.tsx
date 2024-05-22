@@ -3,7 +3,7 @@ import "./InteoSection.scss";
 import ParticlesBackground from "../ParticlesBackground/ParticlesBackground";
 const IntroSection = () => {
   return (
-    <div>
+    <div className="test">
       <section className="home" id="home">
         <div id="overlay">
           <ParticlesBackground />
@@ -11,7 +11,7 @@ const IntroSection = () => {
 
         <h1 className="heading">
           <span className="ali">Ali</span>{" "}
-          <span className="text-secound">NosratiPour</span>
+          <span className="sure-Name">NosratiPour</span>
         </h1>
         <p className="Intro-Text">
           I'm Ali Nosratipour, a London-based Full-Stack Developer with three

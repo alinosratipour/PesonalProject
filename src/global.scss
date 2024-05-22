@@ -15,7 +15,6 @@ $skill-list-light: lighten($about-color, 15%);
 $contact-color: lighten($about-color, 2%);
 $contact-details: darken($about-color, 2%);
 
-
 :root {
   --nav-bg: rgb(35, 49, 49);
   --secondary: "Lato", Calibri, Arial, sans-serif;
@@ -23,7 +22,7 @@ $contact-details: darken($about-color, 2%);
   --heading-text: "Alfa Slab One", cursive;
   --home-overlay: rgba(0, 34, 34, 0.9);
   --yello-color: #f1d900;
-  --about-color: #002222; // Assuming you want to keep the base color in CSS variables
+  --about-color: #002222;
   --skill-section: #{$skill-section-light};
   --skill-list: #{$skill-list-light};
   --skill-color: #000;
@@ -33,4 +32,10 @@ $contact-details: darken($about-color, 2%);
   --contact-detailes: #{$contact-details};
   --portfolio-color: rgba(1, 32, 29, 0.9);
   --form-input-color: rgba(166, 178, 176, 0.3);
+}
+
+@mixin small-screen {
+  @media (max-width: 767px) {
+    @content;
+  }
 }

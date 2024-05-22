@@ -1,24 +1,21 @@
+// components/contact/Contact.tsx
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { GoPersonFill } from "react-icons/go";
-import { MdEmail } from "react-icons/md";
-import { PiBuildingOfficeFill as Office } from "react-icons/pi";
-import { FaPen } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import "./Contact.scss";
-import TextField from "../UILibrary/TextField/TextFiled";
-import TextAreaField from "../UILibrary/TextArea/TextArea";
-import CustomButton from "../UILibrary/Button/Button";
+import ContactForm from "./ContactForm";
 import Modal from "../UILibrary/Modal/Modal";
-import * as Yup from "yup";
+import validationSchema from "./validationSchema";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import CustomButton from "../UILibrary/Button/Button";
+import "./Contact.scss";
 
 // Load environment variables
-const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID ?? "";
-const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID ?? "";
-const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY ?? "";
+const EMAIL_CONFIG = {
+  SERVICE_ID: process.env.REACT_APP_EMAILJS_SERVICE_ID ?? "",
+  TEMPLATE_ID: process.env.REACT_APP_EMAILJS_TEMPLATE_ID ?? "",
+  PUBLIC_KEY: process.env.REACT_APP_EMAILJS_PUBLIC_KEY ?? "",
+};
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [values, setValues] = useState({
@@ -26,15 +23,6 @@ const Contact = () => {
     email: "",
     phone: "",
     message: "",
-  });
-
-  const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Name is required"),
-    email: Yup.string()
-      .email("Invalid email format")
-      .required("Email is required"),
-    phone: Yup.string().required("Phone is required"),
-    message: Yup.string().required("Message is required"),
   });
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,20 +37,24 @@ const Contact = () => {
     setValues({ ...values, [name]: value });
   };
 
-  // Correctly type the form ref
-  const form = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     validationSchema
       .validate(values, { abortEarly: false })
       .then(() => {
-        if (form.current) {
+        if (formRef.current) {
           emailjs
-            .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-              publicKey: PUBLIC_KEY,
-            })
+            .sendForm(
+              EMAIL_CONFIG.SERVICE_ID,
+              EMAIL_CONFIG.TEMPLATE_ID,
+              formRef.current,
+              {
+                publicKey: EMAIL_CONFIG.PUBLIC_KEY,
+              }
+            )
             .then(
               () => {
                 setShowModal(true);
@@ -98,109 +90,48 @@ const Contact = () => {
         </p>
         <div className="icons">
           <a className="icon" href="https://github.com/alinosratipour">
-            {" "}
-            <i>
-              {" "}
-              <FaGithub />
-            </i>
+            <FaGithub />
           </a>
 
           <a
             className="icon"
             href="https://www.linkedin.com/in/ali-nosratipour-52baa120b"
           >
-            <i className="linkedIn">
-              <FaLinkedin />
-            </i>
+            <FaLinkedin />
           </a>
         </div>
       </div>
       <div className="form-container">
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          id="contact"
-          className="form"
-          ref={form}
-          onSubmit={sendEmail} // Added onSubmit to handle form submission
-        >
-          <div className="input-icons">
-            <TextField
-              type="text"
-              name="name"
-              placeholder="Name"
-              onChange={handleInputChange}
-              error={errors.name}
-              value={values.name}
-              inputBackgroundColor="green"
-              inputSize="large"
-              data-testid="phone-field"
-              icon={<GoPersonFill />}
-            />
-          
+        <ContactForm
+          values={values}
+          errors={errors}
+          handleInputChange={handleInputChange}
+          handleTextAreaChange={handleTextAreaChange}
+          onSubmit={sendEmail}
+          formRef={formRef}
+        />
+      </div>
 
-         
-            <TextField
-              type="email"
-              name="email"
-              placeholder="Email"
-              onChange={handleInputChange}
-              error={errors.email}
-              value={values.email}
-              inputBackgroundColor="green"
-              inputSize="large"
-              data-testid="phone-field"
-              icon={<MdEmail />}
-            />
-          
-         
-            <TextField
-              type="text"
-              name="phone"
-              placeholder="Phone"
-              onChange={handleInputChange}
-              error={errors.phone}
-              value={values.phone}
-              inputBackgroundColor="green"
-              inputSize="large"
-              data-testid="phone-field"
-              icon={<Office />}
-            />
-    
-
-        
-            <TextAreaField
-              name="message"
-              placeholder="Enter your message..."
-              onChange={handleTextAreaChange}
-              inputBackgroundColor="green"
-              error={errors.message}
-              inputSize="large"
-              rows={7}
-              icon={<FaPen />}
-            />
-          </div>
-          <p className="input-icons">
+      {showModal && (
+        <Modal>
+          <h2 className="message-Title">Success!</h2>
+          <p className="success-Massage">
+            Your message has been sent successfully.
+          </p>
+          <div className="button-Container">
             <CustomButton
               colorscheme="primary"
-              size="lg"
-              iconPosition="left"
-              type="submit" // Changed button to submit type
+              size="md"
+              type="button"
+              onClick={closeModal}
             >
-              Send
+              Close
             </CustomButton>
-          </p>
-          <div className="form-msg"> </div>
-        </form>
-      </div>
-      {showModal && (
-        <Modal onClose={closeModal}>
-          <h2>Success!</h2>
-          <p>Your message has been sent successfully.</p>
+          </div>
         </Modal>
       )}
     </section>
   );
 };
+
 export default Contact;
