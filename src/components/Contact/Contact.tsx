@@ -11,6 +11,7 @@ import TextField from "../UILibrary/TextField/TextFiled";
 import TextAreaField from "../UILibrary/TextArea/TextArea";
 import CustomButton from "../UILibrary/Button/Button";
 import Modal from "../UILibrary/Modal/Modal";
+import * as Yup from "yup";
 
 // Load environment variables
 const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID ?? "";
@@ -19,18 +20,33 @@ const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY ?? "";
 
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
-  const handleInputChange = (
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.FormEvent<HTMLFormElement>
-  ) => {
-    const { name, value } = event.currentTarget;
-    //validateInput(name, value, values, setValues, setErrors);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    phone: Yup.string().required("Phone is required"),
+    message: Yup.string().required("Message is required"),
+  });
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
   };
+
   const handleTextAreaChange = (
     event: React.ChangeEvent<HTMLTextAreaElement>
   ) => {
-    // Handle input change logic here
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
   };
 
   // Correctly type the form ref
@@ -39,25 +55,37 @@ const Contact = () => {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (form.current) {
-      emailjs
-        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-          publicKey: PUBLIC_KEY,
-        })
-        .then(
-          () => {
-            console.log("SUCCESS!");
-            setShowModal(true);
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-          }
-        );
-    }
+    validationSchema
+      .validate(values, { abortEarly: false })
+      .then(() => {
+        if (form.current) {
+          emailjs
+            .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+              publicKey: PUBLIC_KEY,
+            })
+            .then(
+              () => {
+                setShowModal(true);
+              },
+              (error) => {
+                console.log("FAILED...", error.text);
+              }
+            );
+        }
+      })
+      .catch((err) => {
+        const validationErrors: { [key: string]: string } = {};
+        err.inner.forEach((error: any) => {
+          validationErrors[error.path] = error.message;
+        });
+        setErrors(validationErrors);
+      });
   };
+
   const closeModal = () => {
-    setShowModal(false); // Function to close the modal
+    setShowModal(false);
   };
+
   return (
     <section className="contact">
       <div className="details">
@@ -103,9 +131,8 @@ const Contact = () => {
               name="name"
               placeholder="Name"
               onChange={handleInputChange}
-              // value={values.phone}
-              //error={errors.phone}
-              errorMessagePosition="above"
+              error={errors.name}
+              value={values.name}
               inputBackgroundColor="green"
               inputSize="large"
               data-testid="phone-field"
@@ -113,30 +140,28 @@ const Contact = () => {
             />
           </p>
 
-          <p className="input-icons">
+          <div className="input-icons">
             <TextField
               type="email"
               name="email"
               placeholder="Email"
               onChange={handleInputChange}
-              // value={values.phone}
-              //error={errors.phone}
-              errorMessagePosition="above"
+              error={errors.email}
+              value={values.email}
               inputBackgroundColor="green"
               inputSize="large"
               data-testid="phone-field"
               icon={<MdEmail />}
             />
-          </p>
+          </div>
           <p className="input-icons">
             <TextField
               type="text"
-              name="text"
-              placeholder="Company"
+              name="phone"
+              placeholder="Phone"
               onChange={handleInputChange}
-              // value={values.phone}
-              //error={errors.phone}
-              errorMessagePosition="above"
+              error={errors.phone}
+              value={values.phone}
               inputBackgroundColor="green"
               inputSize="large"
               data-testid="phone-field"
@@ -150,6 +175,7 @@ const Contact = () => {
               placeholder="Enter your message..."
               onChange={handleTextAreaChange}
               inputBackgroundColor="green"
+              error={errors.message}
               inputSize="large"
               rows={7}
               icon={<FaPen />}
@@ -170,8 +196,6 @@ const Contact = () => {
       </div>
       {showModal && (
         <Modal onClose={closeModal}>
-          {" "}
-          {/* Render the modal conditionally */}
           <h2>Success!</h2>
           <p>Your message has been sent successfully.</p>
         </Modal>

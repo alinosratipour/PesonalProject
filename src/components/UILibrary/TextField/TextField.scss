@@ -1,16 +1,3 @@
-// General input styles
-// input {
-//   border-radius: 10px;
-//   width: 90%;
-//   padding: 20px;
-//   padding-left: 50px; // Make room for the icon
-//   //border: 1px solid transparent; // Set initial border
-//   margin: 6px;
-//   outline: none;
-//   box-sizing: border-box; // Include padding and border in the element's total width and height
-//   font-family: var(--primary);
-// }
-
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(194, 184, 184);
@@ -44,17 +31,22 @@
   box-sizing: border-box;
   margin: 6px;
   outline: none;
-  box-sizing: border-box; // Include padding and border in the element's total width and height
   font-family: var(--primary);
   color: #fff;
 }
+.text-field .input-border-error{
+  background-color: rgb(242, 164, 164);
+}
+.text-field .text-error::placeholder {
+  color: black;
+}
+
 
 .input-icons {
   display: flex;
   color: white;
   font-size: 2rem;
 }
-
 .text-field .input-icon {
   position: absolute;
   left: 10px;
@@ -63,15 +55,8 @@
   pointer-events: none;
 }
 
-.text-field .placeholder-icon {
-  position: absolute;
-  left: 10px;
-  color: #ccc;
-  pointer-events: none;
-}
-
 .text-field .input {
-  padding-left: 50px; // Adjust padding to make room for the icon
+  padding-left: 50px;
 }
 
 .text-field .input-small {
@@ -86,26 +71,11 @@
   width: 90%;
 }
 
-// .input[type="text"]:focus {
-//   border: 1px solid #002855; // Change border color on focus
-// }
-
 .text-field {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.error-message-above {
-  color: red;
-  font-size: 12px;
-  margin-left: 8px;
-  text-align: right;
-}
-
-.input-border-error {
-  border: 1px solid red;
 }
 
 .label {
@@ -117,15 +87,9 @@
   font-size: 14px;
   font-weight: 200;
 }
-
-@media screen and (max-width: 768px) {
-  .input {
-    padding: 12px;
-    margin-top: 1px;
-  }
-  .label {
-    font-size: 0.8rem;
-  }
+.input-border-error {
+  border: 1px solid red;
+  background-color: #ffe6e6;
 }
 
 /* Color classes */
