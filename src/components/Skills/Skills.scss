@@ -4,17 +4,17 @@
   font-size: 7rem;
 }
 
-.mybox {
-  height: auto;
-  font-size: 1.2rem;
-  width: 70%;
-  margin: 0 auto;
+// .mybox {
+//   height: auto;
+//   font-size: 1.2rem;
+//   width: 70%;
+//   margin: 0 auto;
 
-  h6 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-}
+//   h6 {
+//     font-size: 1.5rem;
+//     text-align: center;
+//   }
+// }
 .Skills-Section {
   position: relative;
   z-index: 5;
@@ -25,13 +25,15 @@
   width: 100%;
   color: (--skill-color);
   font-size: 2.5rem;
-  display: flex;
+   display: flex;
   font-family: "Armata", sans-serif;
   padding-top: 2rem;
   padding-bottom: 2rem;
   gap: 50px;
   position: relative;
   z-index: 4;
+
+  margin: auto 0;
 }
 .head-title {
   font-family: var(--heading-text);
@@ -47,8 +49,9 @@
 .mybox {
   height: auto;
   font-size: 1.2rem;
-  width: 70%;
+  width: 100%;
   text-align: center;
+  margin: auto;
 
   h6 {
     font-size: 1.5rem;
@@ -64,7 +67,7 @@
     font-size: 1.2rem;
     color: white;
     padding: 15px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 
