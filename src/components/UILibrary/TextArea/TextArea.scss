@@ -1,33 +1,22 @@
 .text-area {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  //width: 100%;
   align-items: center;
   text-align: left;
-
+  border-radius: 10px;
+  border-style: none;
   .label {
     display: flex;
     justify-content: space-between;
     font-family: UbuntuRegular;
     font-size: 14px;
     font-weight: 200;
-    // margin-bottom: 5px;
   }
 
   .textarea-container {
     position: relative;
     width: 100%;
-  }
-
-  .textarea {
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--primary-text-color);
-    resize: vertical;
-    font-family: var(--primary);
   }
 
   .textarea-small {
@@ -58,20 +47,6 @@
     background-color: orange;
   }
 
-  .textarea-border-error {
-    border-color: red;
-  }
-
-  .error-message-default,
-  .error-message-above {
-    color: red;
-    font-size: 12px;
-  }
-
-  .error-message-above {
-    margin-bottom: 5px;
-  }
-
   .textarea-icon,
   .placeholder-icon {
     position: absolute;
@@ -93,4 +68,11 @@
     margin-top: 6px;
     margin-left: 5px;
   }
+}
+
+.text-area .text-error {
+  background-color: rgb(242, 164, 164);
+}
+.text-area .text-error::placeholder {
+  color: black;
 }

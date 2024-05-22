@@ -125,7 +125,7 @@ const Contact = () => {
           ref={form}
           onSubmit={sendEmail} // Added onSubmit to handle form submission
         >
-          <p className="input-icons">
+          <div className="input-icons">
             <TextField
               type="text"
               name="name"
@@ -138,9 +138,9 @@ const Contact = () => {
               data-testid="phone-field"
               icon={<GoPersonFill />}
             />
-          </p>
+          
 
-          <div className="input-icons">
+         
             <TextField
               type="email"
               name="email"
@@ -153,8 +153,8 @@ const Contact = () => {
               data-testid="phone-field"
               icon={<MdEmail />}
             />
-          </div>
-          <p className="input-icons">
+          
+         
             <TextField
               type="text"
               name="phone"
@@ -167,9 +167,9 @@ const Contact = () => {
               data-testid="phone-field"
               icon={<Office />}
             />
-          </p>
+    
 
-          <p className=" input-icons ">
+        
             <TextAreaField
               name="message"
               placeholder="Enter your message..."
@@ -180,8 +180,8 @@ const Contact = () => {
               rows={7}
               icon={<FaPen />}
             />
-          </p>
-          <p className=" input-icons ">
+          </div>
+          <p className="input-icons">
             <CustomButton
               colorscheme="primary"
               size="lg"

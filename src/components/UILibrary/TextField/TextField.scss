@@ -34,15 +34,15 @@
   font-family: var(--primary);
   color: #fff;
 }
-.text-field .input-border-error{
+.text-field .input-border-error {
   background-color: rgb(242, 164, 164);
 }
 .text-field .text-error::placeholder {
   color: black;
 }
 
-
 .input-icons {
+  flex-direction: column;
   display: flex;
   color: white;
   font-size: 2rem;

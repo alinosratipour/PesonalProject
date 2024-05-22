@@ -12,7 +12,6 @@ interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   error?: string;
-  errorMessagePosition?: "default" | "above";
   inputSize?: "small" | "medium" | "large";
   inputBackgroundColor?: "blue" | "green" | "yellow" | "orange";
   icon?: React.ReactNode;
@@ -27,7 +26,7 @@ const TextArea: ForwardRefRenderFunction<HTMLTextAreaElement, TextAreaProps> = (
     label,
     onChange,
     error,
-    errorMessagePosition = "default",
+
     inputSize,
     inputBackgroundColor,
     icon,
@@ -38,15 +37,12 @@ const TextArea: ForwardRefRenderFunction<HTMLTextAreaElement, TextAreaProps> = (
   ref
 ) => {
   const id = `textarea-${Math.random().toString(36).substring(7)}`;
-  const errorMessageClassName = classNames({
-    "error-message-default": errorMessagePosition === "default" && error,
-    "error-message-above": errorMessagePosition === "above" && error,
-  });
-
+  const inputPlaceholder = error ? error : placeholder;
   const textareaClassName = classNames("textarea", {
     "textarea-border-error": error,
     [`textarea-${inputSize}`]: inputSize,
     [`textarea-color-${inputBackgroundColor}`]: inputBackgroundColor,
+     "text-error":error
   });
 
   return (
@@ -54,9 +50,6 @@ const TextArea: ForwardRefRenderFunction<HTMLTextAreaElement, TextAreaProps> = (
       {label && (
         <label htmlFor={id} className="label">
           {label}
-          {error && errorMessagePosition === "above" && (
-            <span className={errorMessageClassName}>{error}</span>
-          )}
         </label>
       )}
       <div className="textarea-container">
@@ -65,7 +58,7 @@ const TextArea: ForwardRefRenderFunction<HTMLTextAreaElement, TextAreaProps> = (
           {...otherProps}
           id={id}
           name={name}
-          placeholder={placeholder}
+          placeholder={inputPlaceholder}
           ref={ref}
           onChange={onChange}
           rows={rows}
@@ -75,9 +68,6 @@ const TextArea: ForwardRefRenderFunction<HTMLTextAreaElement, TextAreaProps> = (
           <span className="placeholder-icon">{placeholderIcon}</span>
         )}
       </div>
-      {error && errorMessagePosition === "default" && (
-        <span className={errorMessageClassName}>{error}</span>
-      )}
     </div>
   );
 };
