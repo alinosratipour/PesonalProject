@@ -2,7 +2,7 @@
 
 @include small-screen {
     .btn-menu {
-        position: absolute;
+        position: fixed;
         z-index: 159;
         right: 20px;
         top: 5px;
