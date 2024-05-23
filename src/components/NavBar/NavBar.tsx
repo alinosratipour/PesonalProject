@@ -1,16 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NavBar.scss";
 import Brand from "../Brand/Brand";
-import HamBurgerMenu from "../UILibrary/HamBurgerMenu/HamBurgerMenu";
-import MobileNav from "../MobileNav/MobileNav";
 
-const NavBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
+const NavBar = ({ toggleMenu }) => {
   return (
     <div>
       <nav className="nav-bar">
@@ -32,9 +24,7 @@ const NavBar = () => {
             <a href="#contact" className="nav-link">Contact</a>
           </li>
         </ul>
-        <HamBurgerMenu showMenu={showMenu} toggleMenu={toggleMenu} />
       </nav>
-      <MobileNav showMenu={showMenu} />
     </div>
   );
 };

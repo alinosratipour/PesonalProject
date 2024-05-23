@@ -1,6 +1,5 @@
 @import "../../global.scss";
 
-
 @include small-screen {
   /* MobileNav.scss */
   .menu {
@@ -8,16 +7,12 @@
     top: 0;
     left: -100%; /* Start off-screen */
     width: 100%;
-   // height: 75vh;
-   // background: var(--portfolio-color);
-   background-color: red;
-   transition: left 0.3s ease-in-out; /* Smooth transition */
+    background: var(--portfolio-color);
+    transition: left 0.3s ease-in-out; /* Smooth transition */
     z-index: 120;
     overflow-y: auto; /* Ensure the menu can scroll if it overflows */
-    //padding-top: 60px; /* Add padding to push content down */
     display: flex;
     flex-direction: column;
-   
   }
 
   .menu.show {
@@ -29,31 +24,37 @@
     top: 0;
     right: -100%; /* Start off-screen */
     width: 100%;
-    //padding: 20px;
-    background: #050de8;
+    background: var(--portfolio-color);
     transition: right 0.3s ease-in-out; /* Smooth transition */
     height: 25vh;
     z-index: 120;
-    
-    
   }
   .menu.show .menu-branding {
     right: 0; /* Slide in */
   }
-
+  .photo {
+    width: 120px;
+    height: 120px;
+    background-image: url("src/assets/img/ali4.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid var(--yello-color);
+    margin: auto;
+    margin-top: 50px;
+  }
   .menu-nav {
     list-style: none;
-    padding: 20px 0; /* Add padding to push items down */
-    margin: 0; /* Reset default margin */
+    padding: 20px 0;
+    margin: 0;
     height: 75vh;
 
     .nav-item {
-     // position: relative;
-      padding: 10px;
       border-bottom: 1px solid #555;
-      
-      
-      //top: 245px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       .nav-link {
         color: #fff;
@@ -65,4 +66,3 @@
     }
   }
 }
-
