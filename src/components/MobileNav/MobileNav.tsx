@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./MobileNav.scss";
 
-const MobileNav = ({ showMenu }) => {
+const MobileNav = ({ showMenu, toggleMenu }) => {
   const [activeLink, setActiveLink] = useState("home");
 
   const handleSetActive = (link) => {
     setActiveLink(link);
+    toggleMenu(); // Close the menu
   };
 
   return (

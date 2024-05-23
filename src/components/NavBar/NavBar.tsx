@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.scss";
 import Brand from "../Brand/Brand";
 
-const NavBar = ({ toggleMenu }) => {
+const NavBar = () => {
   return (
     <div>
       <nav className="nav-bar">
