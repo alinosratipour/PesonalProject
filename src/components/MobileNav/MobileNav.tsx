@@ -1,24 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MobileNav.scss";
 
 const MobileNav = ({ showMenu }) => {
+  const [activeLink, setActiveLink] = useState("home");
+
+  const handleSetActive = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <nav className={`menu ${showMenu ? 'show' : ''}`}>
-      <div className="menu-branding">
+      <div className={`menu-branding ${showMenu ? 'show' : ''}`}>
         <div className="photo"></div>
       </div>
       <ul className="menu-nav">
-        <li className="nav-item current">
-          <a href="/" className="nav-link" id="smhome">Home</a>
+        <li className="nav-item">
+          <a
+            href="/"
+            className={`nav-link ${activeLink === "home" ? "active" : ""}`}
+            id="smhome"
+            onClick={() => handleSetActive("home")}
+          >
+            Home
+          </a>
         </li>
         <li className="nav-item">
-          <a href="#portfolio" className="nav-link" id="smportfolio">Portfolio</a>
+          <a
+            href="#portfolio"
+            className={`nav-link ${activeLink === "portfolio" ? "active" : ""}`}
+            id="smportfolio"
+            onClick={() => handleSetActive("portfolio")}
+          >
+            Portfolio
+          </a>
         </li>
         <li className="nav-item">
-          <a href="#about" className="nav-link" id="smabout">About Me</a>
+          <a
+            href="#about"
+            className={`nav-link ${activeLink === "about" ? "active" : ""}`}
+            id="smabout"
+            onClick={() => handleSetActive("about")}
+          >
+            About Me
+          </a>
         </li>
         <li className="nav-item">
-          <a href="#contact" className="nav-link" id="smcontact">Contact</a>
+          <a
+            href="#contact"
+            className={`nav-link ${activeLink === "contact" ? "active" : ""}`}
+            id="smcontact"
+            onClick={() => handleSetActive("contact")}
+          >
+            Contact
+          </a>
         </li>
       </ul>
     </nav>
