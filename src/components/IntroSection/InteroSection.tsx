@@ -1,9 +1,11 @@
 import React from "react";
 import "./InteoSection.scss";
 import ParticlesBackground from "../ParticlesBackground/ParticlesBackground";
+import MobileNav from "../MobileNav/MobileNav";
 const IntroSection = () => {
   return (
     <section className="home" id="home">
+      {/* <MobileNav /> */}
       <div id="overlay">
         <ParticlesBackground />
       </div>
