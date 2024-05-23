@@ -9,7 +9,9 @@ const About = () => {
           <h2 className="title-1">ABOUT</h2>
         </div>
         <div className="Photo-Container">
-          <div className="my-pic"></div>
+          <div className="my-pic">
+            
+          </div>
 
           <p className="about-text">
             I'm Ali Nosratipour, a Full-Stack developer from London. I have a

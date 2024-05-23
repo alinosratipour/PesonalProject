@@ -7,8 +7,7 @@ const Portfolio = () => {
       <h2 className="head-portfolio">PORTFOLIO</h2>
 <div className="Card-Container">
       <div className="box card-1">
-        <img src="src/assets/img/multiStepForm.png" className="img" alt="" />
-
+        <img src="src/assets/img/multiStepForm.png" className="img" alt="multi-step-form" />
         <div className="overlay">
           <div className="content">Multi Step Form </div>
           <a href="#myy-mod" className="mod-fire">
@@ -18,7 +17,7 @@ const Portfolio = () => {
       </div>
 
       <div className="box card-1">
-        <img src="src/assets/img/pizzaShop.png" className="img3" alt="" />
+        <img src="src/assets/img/pizzaShop.png" className="img3" alt="online food ordering" />
         <div className="overlay  ">
           <div className="content">Monsoon </div>
           <a href="#myy-mod2" className="mod-fire">
@@ -28,7 +27,7 @@ const Portfolio = () => {
       </div>
 
       <div className="box card-1">
-        <img src="src/assets/img/portfolio.png"  className="black-and-white" alt="" />
+        <img src="src/assets/img/portfolio.png"  className="black-and-white" alt="portfolio-site" />
         <div className="overlay  ">
           <div className="content">Portfolio Site</div>
           <a href="#myy-mod1" className="mod-fire">
@@ -38,7 +37,7 @@ const Portfolio = () => {
       </div>
 
       <div className="box card-1">
-        <img src="src/assets/img/movie.png" className="img2" alt="" />
+        <img src="src/assets/img/movie.png" className="img2" alt="movie app" />
         <div className="overlay  ">
           <div className="content">Movie App</div>
           <a href="#myy-mod3" className="mod-fire">
