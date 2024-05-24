@@ -22,7 +22,7 @@ const Portfolio = () => {
           <div className="front">
             <div className="head">
               <img
-                src="src/assets/img/multiStepForm.png"
+                src="assets/img/multiStepForm.png"
                 className="img"
                 alt="multi-step-form"
               />
@@ -61,7 +61,7 @@ const Portfolio = () => {
           <div className="front">
             <div className="head">
               <img
-                src="src/assets/img/pizza.png"
+                src="assets/img/pizza.png"
                 className="img3"
                 alt="online food ordering"
               />
@@ -102,7 +102,7 @@ const Portfolio = () => {
           <div className="front">
             <div className="head">
               <img
-                src="src/assets/img/portfolio.png"
+                src="assets/img/portfolio.png"
                 className="black-and-white"
                 alt="portfolio-site"
               />
@@ -141,7 +141,7 @@ const Portfolio = () => {
           <div className="front">
             <div className="head">
               <img
-                src="src/assets/img/movie.png"
+                src="assets/img/movie.png"
                 className="img2"
                 alt="movie app"
               />
