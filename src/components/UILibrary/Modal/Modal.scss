@@ -1,34 +1,89 @@
+@import "../../../global.scss";
+
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  position: relative; /* Ensure relative positioning */
   
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-close {
+  // position: absolute;
+  // top: 10px;
+  // right: 10px; /* Adjusted position */
+  color: #000;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.visit-page {
+  text-decoration: none;
+  color: var(--yellow-color);
+}
+
+@include small-screen {
   .modal-content {
-    position: relative;
-    background-color: white;
-    padding: 80px;
+    background: #fff;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: auto;
+    overflow-y: scroll;
   }
-  
-  .close-button {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #999;
-    
-   
-    
+  .modal-header {
+    font-family: var(--heading-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 40px;
+    position: relative;
+    top: -15px;
   }
-  
+  .modal-title {
+    font-size: 1.8rem;
+    flex: 2;
+    text-align: center;
+    color: rgb(95, 89, 89);
+  }
+  .modal-close {
+    text-align: right;
+    flex: 1;
+    font-size: 2rem;
+    padding: 0;
+  }
+}

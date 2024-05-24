@@ -8,29 +8,6 @@
   height: 100vh;
   z-index: 6;
 
-  .Card-Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-  }
-  .card {
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    font-family: var(--primary);
-  }
-
-  .card h3 {
-    margin-top: 10px;
-    font-family: var(--primary);
-  }
-  .card p {
-    font-size: 1rem;
-    text-align: center;
-    padding: 0 24px 0 40px;
-  }
-
   .head-portfolio {
     font-size: 3rem;
     color: rgb(166, 178, 176);
@@ -40,191 +17,113 @@
   }
 }
 
-p {
+//button
+.visit-Page-Button {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 40px;
+  width: 140px;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.Card-Container {
+  perspective: 1000px; /* Add perspective for 3D effect */
+  //cursor: pointer;
+  display: flex;
+  gap: 40px;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+.card-Content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 12px 0px 12px;
+  font-family: var(--primary);
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 1rem;
+}
+.card-Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  background-color: var(--portfolio-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--about-font);
   font-size: 1.5rem;
 }
 
-/* New css*/
-
-.my-mod {
-  display: none;
-  background-color: rgba(#000, 0.8);
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 100;
+.card {
+  width: 400px;
+  height: 700px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  filter: drop-shadow(0px 0px 10px var(--green));
+  background-color: var(--green);
+  border-radius: 10px;
 }
-.my-mod:target {
-  display: table;
-}
-.mod-dialog {
-  display: table-cell;
+// .card:hover{
+//   filter: drop-shadow(2px 2px 12px var(--green));
+// }
+.Title {
   color: #fff;
-  vertical-align: middle;
-}
-
-.mod-fire {
-  text-decoration: none;
-  padding: 0.7rem;
-  background-color: var(--yello-color);
-  margin-top: 200px;
-  display: inline-block;
-  border-radius: 5px;
-  color: #000;
-}
-
-.visit-page {
-  text-decoration: none;
-  padding: 0.9rem;
-  background-color: var(--yello-color);
-  color: #000;
-  margin: 0 auto;
-  cursor: pointer;
-  border-radius: 10%;
-}
-
-.mod-body {
-  ul li {
-    font-size: 1.5rem;
-    font-weight: 200;
-  }
-}
-.mod-text {
-  text-align: left;
-  margin: 20px;
-  font-weight: 200;
-  font-size: 1.4rem;
-}
-
-.mod-content {
-  width: 50%;
-  min-width: 300px;
-  margin: auto;
-  background-color: rgb(0, 34, 34);
-  position: relative;
-  padding-bottom: 40px;
-  animation: slideUp 0.3s ease-in-out;
-}
-.mod-header {
-  background-color: var(--contact-color1);
-  padding: 1rem;
-  position: relative;
-}
-.mod-title {
-  margin: 0;
-  color: var(--yello-color);
-}
-.mod-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.7rem;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    bottom: -200px;
-  }
-
-  to {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-
-#portfolio-btn {
-  margin-top: 200px;
-  font-size: 1rem;
-}
-.gallery-wrapper {
-  width: 80%;
-  font-size: 1.2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  text-align: center;
-  grid-auto-flow: row;
-  justify-items: center;
-  margin: 0 auto;
-  gap: 1rem;
-}
-
-.box {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-family: "Armata", sans-serif;
-  max-width: 100%;
-  width: 350px;
-  height: 300px;
-  position: relative;
-  display: inline-block;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  background-color: rgba(0, 34, 34, 1);
-  opacity: 0.8;
-}
-
-.content {
-  color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.card-1:hover .overlay {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  cursor: pointer;
-  border: 5px solid rgb(245, 247, 248);
-  border-radius: 40px 0px 40px 0px;
-  .content {
-    color: #fff;
-    opacity: 1;
-  }
-}
-
-.box h3 {
+  font-size: 1.5rem;
   margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
   font-family: var(--primary);
 }
-.box p {
-  font-size: 1rem;
-  text-align: center;
-  padding: 0 24px 0 40px;
+
+.head {
+  padding: 10px;
 }
-.box img {
-  display: block;
-  width: 350px;
-  height: 299px;
+.head img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.6;
-  border: 5px solid #1c6ea4;
-  border-radius: 40px 0px 40px 0px;
   filter: grayscale(100%);
+  border-radius: 10px;
+  opacity: 0.7;
 }
 
+// .card1:hover {
+//   transform: rotateY(180deg); /* Flip the card on hover */
+// }
 
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back side initially */
+  color: #fff;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  z-index: 1;
+  transform: rotateY(180deg); /* Initially hide the back side */
+}
 
 @include small-screen {
   #portfolio {
@@ -239,32 +138,14 @@ p {
   }
 
   .Card-Container {
+    position: relative;
     flex-direction: column;
     gap: 20px;
-  }
-
-  .box {
-    width: 90%;
-    height: auto;
-  }
-
-  .box img {
     width: 100%;
-    height: auto;
   }
 
-  .content {
-    font-size: 1rem;
-  }
-
-  .mod-content {
-    width: 90%;
-  }
- .Card-Container .img{
-    height: 130px;
-    width: 300px;
-  }
-  .overlay{
-    display: none;
+  .card {
+    width: 100%;
+    margin: auto;
   }
 }

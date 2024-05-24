@@ -106,7 +106,6 @@
   grid-template-columns: 1fr 2fr;
 }
 
-
 .Photo-Container ul {
   flex: 1;
   font-size: 1rem;
@@ -197,5 +196,8 @@
   }
   .flex-wrapper-2 .service-Description {
     padding-bottom: 4rem;
+  }
+  .about-wrapper {
+    z-index: 2;
   }
 }
