@@ -41,30 +41,39 @@
   flex-direction: column;
 }
 
-.serv-3,
-.serv-4,
-.serv-1,
-.serv-2 {
+.title {
   text-align: left;
   color: var(--yello-color);
   font-family: var(--primary);
   padding-bottom: 10px;
   font-size: 1.5rem;
- 
 }
 
 .flex-wrapper {
   display: flex;
   padding-bottom: 8rem;
+  gap: 100px;
 }
 
 .flex-wrapper-2 {
   display: flex;
+  gap: 100px;
 }
-
+.about-wrapper .services .service-Description {
+  width: 100%;
+}
+.about-wrapper .sevices-2 .service-Description {
+  width: 100%;
+}
+.flex-wrapper-2 .services-3 .service-Description {
+  width: 100%;
+}
+.flex-wrapper-2 .services-4 .service-Description {
+  width: 100%;
+}
 .service-Description {
   width: 80%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 200;
   color: var(--about-font);
   font-family: var(--primary);
@@ -97,22 +106,14 @@
   grid-template-columns: 1fr 2fr;
 }
 
-.Photo-Container p {
-  width: 100%;
-  margin-top: 60px;
-  line-height: 2;
-  padding: 0 50px 0 40px;
-  font-weight: 200;
-  // color: var(--about-font);
-  // font-family: var(--primary);
-}
+
 .Photo-Container ul {
   flex: 1;
   font-size: 1rem;
   text-align: left;
 }
 
-.my-pic {
+.photo {
   width: 300px;
   height: 300px;
   background-image: url("src/assets/img/ali4.jpg");
@@ -122,7 +123,7 @@
   margin-left: 40px;
 }
 
-.my-pic {
+.photo {
   margin-top: 20px;
 }
 
@@ -133,12 +134,13 @@
 .about-text {
   font-family: var(--primary);
   color: var(--about-font);
-  line-height: 1.5em;
-  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 40px 20px 0 60px;
+  font-size: 1.3rem;
 }
 
 @include small-screen {
-  .my-pic {
+  .photo {
     width: 200px;
     height: 200px;
     margin: auto;
@@ -149,7 +151,6 @@
   }
   .Photo-Container p {
     padding: 0;
-    // padding-top: 30px;
     font-size: 1rem;
     line-height: 25px;
     text-align: center;
@@ -159,6 +160,7 @@
   .flex-wrapper-2 {
     flex-direction: column;
     padding-bottom: 4rem;
+    gap: 2px;
   }
 
   .service-Description {
@@ -168,7 +170,9 @@
   .about-title .title-1 {
     font-size: 3rem;
   }
-
+  .title {
+    text-align: center;
+  }
   .what-i-do {
     font-size: 2rem;
   }
