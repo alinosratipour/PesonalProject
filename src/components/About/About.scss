@@ -56,8 +56,9 @@
 }
 
 .flex-wrapper-2 {
+  
   display: flex;
-  gap: 100px;
+  gap: 170px;
 }
 .about-wrapper .services .service-Description {
   width: 100%;
@@ -72,7 +73,7 @@
   width: 100%;
 }
 .service-Description {
-  width: 80%;
+   width: 80%;
   font-size: 1.3rem;
   font-weight: 200;
   color: var(--about-font);

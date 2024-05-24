@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
         <h3 className="phone">07367939332</h3>
         <h4 className="or">Or</h4>
         <p>
-          Send a Message using
+          Send a message using
           <br /> the contact form{" "}
         </p>
         <div className="icons">

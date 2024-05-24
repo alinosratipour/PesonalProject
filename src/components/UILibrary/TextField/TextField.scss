@@ -46,7 +46,6 @@
 .input-icons {
   flex-direction: column;
   display: flex;
-  color: white;
   font-size: 2rem;
 }
 .text-field .input-icon {
@@ -56,6 +55,7 @@
   align-items: center;
   pointer-events: none;
   color: #fff;
+  font-size: 2rem;
 }
 
 .text-field .input {
