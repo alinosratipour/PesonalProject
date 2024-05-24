@@ -29,10 +29,11 @@ const Portfolio = () => {
             </div>
             <h2 className="Title">MultiStep From</h2>
             <div className="card-Content">
-              I have developed a multi-step form project using React, Vite, Zod,
-              and control statements. The main objective of this project was to
-              challenge and improve my advanced React skills while delivering a
-              dynamic and interactive user experience.
+              <p>
+                Developed a multi-step form solution for seamless data
+                collection and user interaction, enhancing website engagement
+                and usability.
+              </p>
             </div>
             <div className="card-Footer">
               <a
@@ -68,12 +69,11 @@ const Portfolio = () => {
             </div>
             <h2 className="Title">Food Ordering</h2>
             <div className="card-Content">
-              A takeaway and delivery restaurant in North London, Monsoon
-              specializes in Indian cuisine. Initially, they exclusively
-              accepted online orders via Just Eat. However, they've recently
-              launched their proprietary online ordering platform. This new
-              system enables customers to place orders directly, eliminating the
-              need to pay commissions to Just Eat.
+              <p>
+                I built Food Ordering to help local takeaways accept online
+                orders directly, freeing them from hefty commission fees charged
+                by third-party platforms.
+              </p>
             </div>
             <div className="card-Footer">
               <a
@@ -107,12 +107,13 @@ const Portfolio = () => {
                 alt="portfolio-site"
               />
             </div>
-            <h2 className="Title">MultiStep From</h2>
+            <h2 className="Title">Commin Soon</h2>
             <div className="card-Content">
-              I have developed a multi-step form project using React, Vite, Zod,
-              and control statements. The main objective of this project was to
-              challenge and improve my advanced React skills while delivering a
-              dynamic and interactive user experience.
+              <p>
+                I aimed to refine my Front-End Development skills and gain
+                practical exposure to React context and API integration, using
+                TVmaze to retrieve data on TV shows and episodes
+              </p>
             </div>
             <div className="card-Footer">
               <a
@@ -146,12 +147,13 @@ const Portfolio = () => {
                 alt="movie app"
               />
             </div>
-            <h2 className="Title">MultiStep From</h2>
+            <h2 className="Title">Movie App</h2>
             <div className="card-Content">
-              I have developed a multi-step form project using React, Vite, Zod,
-              and control statements. The main objective of this project was to
-              challenge and improve my advanced React skills while delivering a
-              dynamic and interactive user experience.
+              <p>
+                I aimed to refine my Front-End Development skills and gain
+                practical exposure to React context and API integration, using
+                TVmaze to retrieve data on TV shows and episodes.
+              </p>
             </div>
             <div className="card-Footer">
               <a
