@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../UILibrary/Modal/Modal";
 import "./Portfolio.scss";
-import CustomButton from "../UILibrary/Button/Button";
 
 const Portfolio = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -17,7 +16,7 @@ const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <h2 className="head-portfolio">PORTFOLIO</h2>
- 
+
       <div className="Card-Container">
         <div className="card">
           <div className="front">

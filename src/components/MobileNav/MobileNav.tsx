@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import "./MobileNav.scss";
-
-const MobileNav = ({ showMenu, toggleMenu }) => {
+interface MobileNavProps {
+  showMenu: boolean;
+  toggleMenu: () => void;
+}
+const MobileNav: React.FC<MobileNavProps> = ({ showMenu, toggleMenu }) => {
   const [activeLink, setActiveLink] = useState("home");
 
-  const handleSetActive = (link) => {
+  const handleSetActive = (link: string) => {
     setActiveLink(link);
     toggleMenu(); // Close the menu
   };
 
   return (
-    <nav className={`menu ${showMenu ? 'show' : ''}`}>
-      <div className={`menu-branding ${showMenu ? 'show' : ''}`}>
+    <nav className={`menu ${showMenu ? "show" : ""}`}>
+      <div className={`menu-branding ${showMenu ? "show" : ""}`}>
         <div className="photo"></div>
       </div>
       <ul className="menu-nav">
