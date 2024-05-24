@@ -5,7 +5,6 @@
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
   z-index: 20;
   background-color: var(--about-color);
-  
 }
 
 #about {
@@ -50,6 +49,8 @@
   color: var(--yello-color);
   font-family: var(--primary);
   padding-bottom: 10px;
+  font-size: 1.5rem;
+ 
 }
 
 .flex-wrapper {
@@ -59,7 +60,6 @@
 
 .flex-wrapper-2 {
   display: flex;
-  
 }
 
 .service-Description {
@@ -68,6 +68,7 @@
   font-weight: 200;
   color: var(--about-font);
   font-family: var(--primary);
+  line-height: 1.5;
 }
 
 .about-title {
@@ -98,13 +99,12 @@
 
 .Photo-Container p {
   width: 100%;
-  font-size: 1rem;
   margin-top: 60px;
   line-height: 2;
   padding: 0 50px 0 40px;
   font-weight: 200;
-  color: var(--about-font);
-  font-family: var(--primary);
+  // color: var(--about-font);
+  // font-family: var(--primary);
 }
 .Photo-Container ul {
   flex: 1;
@@ -133,6 +133,8 @@
 .about-text {
   font-family: var(--primary);
   color: var(--about-font);
+  line-height: 1.5em;
+  font-size: 1.4rem;
 }
 
 @include small-screen {
@@ -147,7 +149,7 @@
   }
   .Photo-Container p {
     padding: 0;
-   // padding-top: 30px;
+    // padding-top: 30px;
     font-size: 1rem;
     line-height: 25px;
     text-align: center;
@@ -157,12 +159,11 @@
   .flex-wrapper-2 {
     flex-direction: column;
     padding-bottom: 4rem;
-   
   }
 
   .service-Description {
     width: 100%;
-   margin: 5px;
+    margin: 5px;
   }
   .about-title .title-1 {
     font-size: 3rem;
@@ -173,9 +174,6 @@
   }
   .about-text {
     font-size: 1.2rem;
-
-   
- 
   }
 
   .serv-3,
@@ -192,10 +190,8 @@
     text-align: left;
     font-size: 1rem;
     line-height: 25px;
-    
   }
   .flex-wrapper-2 .service-Description {
     padding-bottom: 4rem;
-   
   }
 }

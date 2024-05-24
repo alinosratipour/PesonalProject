@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -34,7 +35,7 @@ $contact-details: darken($about-color, 2%);
   --form-input-color: rgba(166, 178, 176, 0.3);
 }
 @mixin easeOut {
-  transition: all 0.5s ease-out;  
+  transition: all 0.5s ease-out;
 }
 
 @mixin small-screen {
