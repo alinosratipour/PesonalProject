@@ -9,7 +9,9 @@ const About = () => {
           <h2 className="title-1">ABOUT</h2>
         </div>
         <div className="Photo-Container">
-          <div className="my-pic"></div>
+          <div className="photo">
+            
+          </div>
 
           <p className="about-text">
             I'm Ali Nosratipour, a Full-Stack developer from London. I have a
@@ -24,7 +26,7 @@ const About = () => {
         </div>
         <div className="flex-wrapper">
           <div className="services">
-            <h2 className="serv-1">Prototyping</h2>
+            <h2 className="title">Prototyping</h2>
             <p className="service-Description">
               I research the client's business, competitors, and customers, then
               draft an initial prototype using wireframing tools like Figma. My
@@ -35,7 +37,7 @@ const About = () => {
           </div>
 
           <div className="sevices-2">
-            <h2 className="serv-2">PSD/XD Slicing </h2>
+            <h2 className="title">PSD/XD Slicing </h2>
             <p className="service-Description">
               I excel at converting designs from XD, PSD, or Figma into
               pixel-perfect HTML, CSS, and JavaScript code. My focus on detail
@@ -47,7 +49,7 @@ const About = () => {
 
         <div className="flex-wrapper-2">
           <div className="services-3">
-            <h2 className="serv-3">Frontend development</h2>
+            <h2 className="title">Frontend development</h2>
             <p className="service-Description">
               I can develop a website in plain HTML/CSS and vanilla javascript
               or use libraries and frameworks like React or bootstrap. When it
@@ -56,7 +58,7 @@ const About = () => {
             </p>
           </div>
           <div className="services-4">
-            <h2 className="serv-4">Performance Testing</h2>
+            <h2 className="title">Performance Testing</h2>
             <p className="service-Description">
               I understand how important is to make sure that the website
               performs smoothly without any malfunction. optimizing images and

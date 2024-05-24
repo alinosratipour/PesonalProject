@@ -64,7 +64,7 @@ const ParticlesBackground: React.FC = () => {
               default: "bounce",
             },
             random: false,
-            speed: 2, // Constant speed
+            speed: 1, // Reduced speed for smooth and slow movement
             straight: false,
           },
           number: {
@@ -72,7 +72,7 @@ const ParticlesBackground: React.FC = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
             value: 0.5,
@@ -81,10 +81,10 @@ const ParticlesBackground: React.FC = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 },
           },
         },
-        detectRetina: true,
+        detectRetina: false,
       }}
     />
   );

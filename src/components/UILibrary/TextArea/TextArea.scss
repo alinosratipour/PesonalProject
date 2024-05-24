@@ -1,0 +1,91 @@
+@import "../../../global.scss";
+.text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  border-radius: 10px;
+  border-style: none;
+  .label {
+    display: flex;
+    justify-content: space-between;
+    font-family: UbuntuRegular;
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  .textarea-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .textarea-small {
+    width: 30%;
+  }
+
+  .textarea-medium {
+    width: 50%;
+  }
+
+  .textarea-large {
+    width: 90%;
+  }
+
+  .textarea-color-blue {
+    background-color: blue;
+  }
+
+  .textarea-color-green {
+    background-color: var(--form-input-color);
+  }
+
+  .textarea-color-yellow {
+    background-color: yellow;
+  }
+
+  .textarea-color-orange {
+    background-color: orange;
+  }
+
+  .textarea-icon,
+  .placeholder-icon {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    left: 52px;
+    color: #fff;
+    
+    
+  }
+
+  .placeholder-icon {
+    left: unset;
+    right: 10px;
+  }
+  textarea {
+    border-radius: 10px;
+    padding: 30px;
+    padding-left: 55px;
+    border-style: none;
+    outline: none;
+    margin-top: 6px;
+    margin-left: 5px;
+    
+  }
+}
+
+.text-area .text-error {
+  background-color: rgb(242, 164, 164);
+}
+.text-area .text-error::placeholder {
+  color: black;
+}
+
+@include small-screen {
+  .textarea-icon,
+  .placeholder-icon {
+    margin-left: -23px;
+  }
+ 
+  
+}
