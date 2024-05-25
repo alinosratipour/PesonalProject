@@ -12,6 +12,22 @@ body {
 
 }
 
+.nav-link::after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: rgb(64, 186, 217);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  opacity: 0;
+  transform: all 0.2s;
+}
+.nav-link::after{
+  opacity: 1;
+
+}
 .nav-container {
   display: flex;
   color: #fff;
