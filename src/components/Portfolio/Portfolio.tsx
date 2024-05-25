@@ -112,7 +112,7 @@ const Portfolio = () => {
               <p>
                 Your COVID-19 app is useful because it provides real-time
                 updates, statistics, and resources, helping users stay informed
-                and safe during the pandemic
+                and safe during the pandemic.
               </p>
             </div>
             <div className="card-Footer">
