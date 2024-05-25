@@ -12,12 +12,15 @@ const About = () => {
           <div className="photo"></div>
 
           <p className="about-text">
-            I'm Ali Nosratipour, a Full-Stack developer based in London with a
-            passion for coding and an insatiable curiosity. I excel in
-            problem-solving, adaptability, and resilience, thriving in dynamic
-            environments and always eager to learn new technologies. My journey
-            is driven by a desire to create meaningful, impactful work and
-            continuously grow and improve.
+            Hi there! I'm Ali Nosratipour, and I love working with people and
+            tackling challenges head-on. I'm great at collaborating and always
+            find it easy to get along with others, which helps create a fun and
+            productive team vibe. Problem-solving is my jam, and I'm always on
+            the lookout for new things to learn and ways to grow. I also have a
+            good grasp of the business side of things and love sharing ideas on
+            how to make things better. Whether we're working on a project
+            together or brainstorming fresh solutions, I’m all about achieving
+            awesome results.
           </p>
         </div>
         <div className="what-i-do">
