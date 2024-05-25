@@ -102,7 +102,7 @@ const Portfolio = () => {
           <div className="front">
             <div className="head">
               <img
-                src="assets/img/portfolio.png"
+                src="assets/img/covid-19.png"
                 className="black-and-white"
                 alt="portfolio-site"
               />
