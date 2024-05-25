@@ -139,12 +139,12 @@
 }
 
 @include small-screen {
-  .photo {
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    //padding-bottom: 20px;
-  }
+  // .photo {
+  //   width: 200px;
+  //   height: 200px;
+  //   margin: auto;
+  //   //padding-bottom: 20px;
+  // }
   .Photo-Container {
     grid-template-columns: 1fr;
     text-align: center;
