@@ -9,8 +9,8 @@ const About = () => {
           <h2 className="title-1">ABOUT</h2>
         </div>
         <div className="Photo-Container">
-          <div className="photo"></div>
-
+          {/* <div className="photo"></div> */}
+          <img src="/assets/img/ali4.jpg" alt="ali" className="photo" />
           <p className="about-text">
             I'm Ali Nosratipour, a Full-Stack developer based in London with a
             passion for coding and an insatiable curiosity. I excel in
