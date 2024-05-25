@@ -102,23 +102,23 @@ const Portfolio = () => {
           <div className="front">
             <div className="head">
               <img
-                src="src/assets/img/portfolio.png"
+                src="src/assets/img/covid-19.png"
                 className="black-and-white"
                 alt="portfolio-site"
               />
             </div>
-            <h2 className="Title">Commin Soon</h2>
+            <h2 className="Title">COVID-19 Monitor</h2>
             <div className="card-Content">
               <p>
-                I aimed to refine my Front-End Development skills and gain
-                practical exposure to React context and API integration, using
-                TVmaze to retrieve data on TV shows and episodes
+                Your COVID-19 app is useful because it provides real-time
+                updates, statistics, and resources, helping users stay informed
+                and safe during the pandemic
               </p>
             </div>
             <div className="card-Footer">
               <a
                 className="visit-Page-Button"
-                href="https://ali-react-movie-app.netlify.app"
+                href="https://alinosratipour.github.io/Covid-19"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -126,7 +126,7 @@ const Portfolio = () => {
               </a>
               <a
                 className="visit-Page-Button"
-                href="https://ali-react-movie-app.netlify.app"
+                href="https://github.com/alinosratipour/Covid-19"
                 target="_blank"
                 rel="noopener noreferrer"
               >
