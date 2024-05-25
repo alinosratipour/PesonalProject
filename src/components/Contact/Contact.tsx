@@ -113,8 +113,7 @@ const Contact: React.FC = () => {
       </div>
 
       {showModal && (
-        <Modal>
-          <h2 className="message-Title">Success!</h2>
+        <Modal title="Success" >
           <p className="success-Massage">
             Your message has been sent successfully.
           </p>

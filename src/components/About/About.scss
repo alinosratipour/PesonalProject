@@ -56,7 +56,6 @@
 }
 
 .flex-wrapper-2 {
-  
   display: flex;
   gap: 170px;
 }
@@ -73,7 +72,7 @@
   width: 100%;
 }
 .service-Description {
-   width: 80%;
+  width: 80%;
   font-size: 1.3rem;
   font-weight: 200;
   color: var(--about-font);
@@ -144,6 +143,7 @@
     width: 200px;
     height: 200px;
     margin: auto;
+    //padding-bottom: 20px;
   }
   .Photo-Container {
     grid-template-columns: 1fr;
@@ -155,7 +155,10 @@
     line-height: 25px;
     text-align: center;
   }
-
+  .Photo-Container .photo {
+    width: 230px;
+    height: 230px;
+  }
   .flex-wrapper,
   .flex-wrapper-2 {
     flex-direction: column;
@@ -179,7 +182,9 @@
   .about-text {
     font-size: 1.2rem;
   }
-
+  .Photo-Container .about-text {
+    padding-top: 20px;
+  }
   .serv-3,
   .serv-4,
   .serv-1,
