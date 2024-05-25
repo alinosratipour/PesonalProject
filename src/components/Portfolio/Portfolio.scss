@@ -16,6 +16,21 @@
     margin-top: 3px;
   }
 }
+.icon-Container {
+  font-size: 2rem;
+  width: 100%;
+  margin-top: 90px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--about-font);
+  text-align: center;
+}
+.description{
+  max-height: 100px;
+}
 
 //button
 .visit-Page-Button {

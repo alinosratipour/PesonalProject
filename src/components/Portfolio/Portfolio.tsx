@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import Modal from "../UILibrary/Modal/Modal";
+import React from "react";
+import { SiJest } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
+import { GrGraphQl } from "react-icons/gr";
+import { SiPostgresql } from "react-icons/si";
+import { BsBootstrap } from "react-icons/bs";
+import { SiMui } from "react-icons/si";
+import { SiDocker } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa6";
 import "./Portfolio.scss";
 
 const Portfolio = () => {
-  const [activeModal, setActiveModal] = useState<string | null>(null);
-
-  const openModal = (modalId: string) => {
-    setActiveModal(modalId);
-  };
-
-  const closeModal = () => {
-    setActiveModal(null);
-  };
-
   return (
     <section className="portfolio" id="portfolio">
       <h2 className="head-portfolio">PORTFOLIO</h2>
@@ -29,11 +28,17 @@ const Portfolio = () => {
             </div>
             <h2 className="Title">MultiStep From</h2>
             <div className="card-Content">
-              <p>
+              <p className="description">
                 Developed a multi-step form solution for seamless data
                 collection and user interaction, enhancing website engagement
                 and usability.
               </p>
+
+              <div className="icon-Container">
+                <FaReact />
+                <SiJest />
+                <SiTypescript />
+              </div>
             </div>
             <div className="card-Footer">
               <a
@@ -69,11 +74,20 @@ const Portfolio = () => {
             </div>
             <h2 className="Title">Food Ordering</h2>
             <div className="card-Content">
-              <p>
+              <p className="description">
                 I built Food Ordering to help local takeaways accept online
                 orders directly, freeing them from hefty commission fees charged
                 by third-party platforms.
               </p>
+
+              <div className="icon-Container">
+                <SiPrisma />
+                <GrGraphQl />
+                <SiPostgresql />
+                <SiTypescript />
+                <SiDocker />
+                <FaNodeJs />
+              </div>
             </div>
             <div className="card-Footer">
               <a
@@ -109,11 +123,16 @@ const Portfolio = () => {
             </div>
             <h2 className="Title">COVID-19 Monitor</h2>
             <div className="card-Content">
-              <p>
+              <p className="description">
                 Your COVID-19 app is useful because it provides real-time
                 updates, statistics, and resources, helping users stay informed
                 and safe during the pandemic
               </p>
+
+              <div className="icon-Container">
+                <FaReact />
+                <BsBootstrap />
+              </div>
             </div>
             <div className="card-Footer">
               <a
@@ -149,11 +168,16 @@ const Portfolio = () => {
             </div>
             <h2 className="Title">Movie App</h2>
             <div className="card-Content">
-              <p>
+              <p className="description">
                 I aimed to refine my Front-End Development skills and gain
                 practical exposure to React context and API integration, using
                 TVmaze to retrieve data on TV shows and episodes.
               </p>
+
+              <div className="icon-Container">
+                <FaReact />
+                <SiMui />
+              </div>
             </div>
             <div className="card-Footer">
               <a

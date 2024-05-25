@@ -14,7 +14,6 @@ body {
 .nav-link::after {
   content: "";
   height: 2px;
-  width: 0%;
   background-color: rgb(64, 186, 217);
   display: block;
   opacity: 0;
@@ -26,7 +25,6 @@ body {
 
 .nav-link:hover::after {
   opacity: 1;
-  width: 100%;
   transform: scaleX(1); 
 }
 
